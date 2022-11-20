@@ -48,5 +48,12 @@ public class BDaoServiceImpl implements BDaoService{
 		
 	}
 
+	// search 
+	public List<BDto> searchDao(String keyword, String content) throws Exception{
+		content = '%' + content + '%';
+		return dao.searchDao(keyword, content);
+	}
+
+
 
 }

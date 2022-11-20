@@ -47,5 +47,13 @@ public class BDaoImpl implements BDao {
 		
 	}
 
+	// search 
+	@Override
+	public List<BDto> searchDao(String keyword, String content) throws Exception {
+		System.out.println("다오 임플 : " + content);
+		return sqlSession.selectList(nameSpace + ".searchDao");
+	}
+
+
 
 }

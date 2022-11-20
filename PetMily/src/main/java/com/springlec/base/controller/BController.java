@@ -62,6 +62,18 @@ public class BController {
 		
 	}
 	
+	// 게시판 검색 
+	@RequestMapping("/searchlist")
+	public String searchlist(HttpServletRequest request,Model model) throws Exception{
+		String keyword = request.getParameter("keyword");
+		String content= request.getParameter("content");
+		
+		List<BDto> searchListDao = service.searchDao(keyword,content);
+		
+		model.addAttribute("list", searchListDao);
+		return "board_list";
+	}
+	
 		
 
 	

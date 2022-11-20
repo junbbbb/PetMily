@@ -29,5 +29,10 @@
 	<delete id="deleteDao"> 
 		DELETE FROM pet_board WHERE seqno=#{seqno} 
 	</delete>
+	
+	<!-- search-->
+	<select id="searchDao" resultType="com.springlec.base.model.BDto">
+		SELECT * FROM pet_board WHERE ${keyword} like #{content}
+	</select>
 
 </mapper>

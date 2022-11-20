@@ -20,6 +20,10 @@ public interface BDaoService {
 	
 	// 게시판 delete
 	public void deleteDao(int seqno) throws Exception;
+	
+	// 게시판 search 
+	public List<BDto> searchDao(String keyword, String content) throws Exception;
+	
 
 
 	

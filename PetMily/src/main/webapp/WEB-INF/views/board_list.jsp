@@ -85,34 +85,36 @@
 </div>
 
 <!-- search[S] -->
-<div style="margin: 50px 0px 0px 200px">
-<div class="row my-3">
-				<div class="col-3"></div>
-				
-				<!-- 드롭다운  -->
-				<div class="col-1">
-					<select class="form-select w-100"
-						aria-label="Default select example" name="option">
-						<option value="ptitle" selected>번호</option>
-						<option value="user_uid">제목</option>
-						<option value="plocation">내용</option>
-						<option value="plocation">작성자</option>
-						<option value="plocation">날찌</option>
-					</select>
-				</div>
-				
-				<!-- 검색  -->
-				<div class="col-3">
-					<input type="text" class="form-control" name="query"
-						id="exampleFormControlInput1" placeholder="검색어를 입력해 주세요">
-				</div>
-
-				<!-- 검색 버튼 -->
-				<div class="col-1">
-					<input class="btn btn-warning " type="submit" value="검색">
-				</div>
-</div>
-</div>
+<form action="/searchlist">
+	<div style="margin: 50px 0px 0px 200px">
+		<div class="row my-3">
+						<div class="col-3"></div>
+						
+						<!-- 드롭다운  -->
+						<div class="col-1">
+							<select class="form-select w-100"
+								aria-label="Default select example" name="keyword">
+								<option value="seqno" selected>번호</option>
+								<option value="title">제목</option>
+								<option value="content">내용</option>
+								<option value="writer">작성자</option>
+								<option value="initdate">날찌</option>
+							</select>
+						</div>
+						
+						<!-- 검색  -->
+						<div class="col-3">
+							<input type="text" class="form-control" name="content"
+								id="exampleFormControlInput1" placeholder="검색어를 입력해 주세요">
+						</div>
+		
+						<!-- 검색 버튼 -->
+						<div class="col-1">
+							<input class="btn btn-warning " type="submit" value="검색">
+						</div>
+		</div>
+	</div>
+</form>
 <!-- search[E] -->
 
 <!-- table[S] -->

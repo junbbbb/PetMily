@@ -21,6 +21,11 @@ public interface BDao {
 	// delete 
 	public void deleteDao(int seqno) throws Exception;
 	
+	// search 
+	public List<BDto> searchDao(String keyword, String content) throws Exception;
+	
+	
+	
 	
 
 }
