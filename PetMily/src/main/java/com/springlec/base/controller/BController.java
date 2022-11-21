@@ -18,6 +18,13 @@ public class BController {
 	@Autowired
 	BDaoService service;
 	
+	// home
+	@RequestMapping("/home")
+	public String home() throws Exception{
+
+		return "home";
+	}
+	
 	// 게시판 검색
 	@RequestMapping("/list")
 	public String list(Model model) throws Exception{
@@ -73,6 +80,8 @@ public class BController {
 		model.addAttribute("list", searchListDao);
 		return "board_list";
 	}
+	
+
 	
 		
 
