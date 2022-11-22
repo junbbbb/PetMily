@@ -94,17 +94,17 @@
 				<h3>PETMILY</h3>
 			</div>
 		</div>
-		<form action="login.do" method="post">
+		<form action="login" method="post">
 		<div class="row justify-content-center ">
 			<div class="col-4 mb-3 gy-3">
-				<input type="text" class="form-control" name="uid"
+				<input type="text" class="form-control" name="id"
 					placeholder="아이디를 입력해 주세요">
 			</div>
 		</div>
 
 		<div class="row justify-content-center ">
 			<div class="col-4 mb-3">
-				<input type="password" class="form-control" name="upw"
+				<input type="password" class="form-control" name="pw"
 					placeholder="비밀번호를 입력해 주세요">
 			</div>
 		</div>
