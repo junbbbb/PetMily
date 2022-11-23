@@ -135,11 +135,11 @@
 
 				<c:forEach items="${list}" var="dto">
 					<tr>
-						<td>${dto.seqno}</td>
-						<td>${dto.title}</td>
-						<td><a href="content_view?seqno=${dto.seqno}">${dto.content}</a></td>
-						<td>${dto.writer}</td>
-						<td>${dto.initdate}</td>
+						<td>${dto.pid}</td>
+						<td>${dto.ptitle}</td>
+						<td><a href="content_view?pid=${dto.pid}">${dto.pcontent}</a></td>
+						<td>${dto.user_uid}</td>
+						<td>${dto.pinitdate}</td>
 					</tr>
 				</c:forEach>			
 

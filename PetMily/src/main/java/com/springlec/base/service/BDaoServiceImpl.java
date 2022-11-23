@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.springlec.base.dao.BDao;
 import com.springlec.base.model.BDto;
+import com.springlec.base.model.PagingDTO;
+import com.springlec.base.model.PostingDTO;
 
 @Service
 public class BDaoServiceImpl implements BDaoService{
@@ -49,9 +51,40 @@ public class BDaoServiceImpl implements BDaoService{
 	}
 
 	// search 
+	@Override
 	public List<BDto> searchDao(String keyword, String content) throws Exception{
 		content = '%' + content + '%';
 		return dao.searchDao(keyword, content);
+	}
+
+	@Override
+	public int postingListRowDao(String pcategory) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.postingListRowDao(pcategory);
+	}
+
+	@Override
+	public PagingDTO postingListPagingDao(int cPage, int totalRows, int pageLength) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.postingListPagingDao(cPage, totalRows, pageLength);
+	}
+
+	@Override
+	public List<PostingDTO> postingGetListDao(int cPage, int rowLength, String pcategory, String option, String query)
+			throws Exception {
+		// TODO Auto-generated method stub
+		int start = (cPage - 1) * rowLength;
+		return dao.postingGetListDao(cPage, rowLength, pcategory, option, query, start);
+	}
+	//posting [e]
+	
+	
+	
+	//petspec detail[s]
+	@Override
+	public String viewPetspecDetailDao(String psbreeds) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.viewPetspecDetailDao(psbreeds);
 	}
 
 

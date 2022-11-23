@@ -7,7 +7,7 @@
 
 	<!-- list -->
 	<select id="listDao" resultType="com.springlec.base.model.BDto">
-		SELECT * FROM pet_board
+		SELECT pid, ptitle, pcontent, pinitdate, user_uid FROM posting
 	</select>
 	
 	<!-- insert -->
@@ -33,6 +33,24 @@
 	<!-- search-->
 	<select id="searchDao" resultType="com.springlec.base.model.BDto">
 		SELECT * FROM pet_board WHERE ${keyword} like #{content}
+	</select>
+	
+	
+	<!-- paging[s] -->
+	<select id="postingListRowDao" resultType="_int">
+		select count(*) from posting where pdeletedate is null and pcategory = #{pcategory}
+	</select>
+	
+	<select id="postingGetListDao" resultType="com.springlec.base.model.PagingDTO">
+		select pid, ptitle, plocation, pinitdate, user_uid, pcategory from posting 
+					where pdeletedate is null and ${option} like #{query} 
+					order by pid desc limit #{start},#{rowLength}
+	</select>
+	<!-- paging[e] -->
+	
+	<!-- petsepec detail view -->
+	<select id="viewPetspecDetailDao" resultType="string">
+		select pscontent from petspec where psbreeds = #{psbreeds}
 	</select>
 
 </mapper>

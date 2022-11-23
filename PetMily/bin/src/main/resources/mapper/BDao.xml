@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+						
+<mapper namespace="com.springlec.base.dao.BDao">
+
+	<!-- list -->
+	<select id="listDao" resultType="com.springlec.base.model.BDto">
+		SELECT * FROM pet_board
+	</select>
+	
+	<!-- insert -->
+	<insert id="writeDao">
+		INSERT INTO pet_board (title,content,writer,initdate) VALUES (#{title}, #{content}, #{writer}, now())
+	</insert>
+	
+	<!-- 수정화면으로 가져올때 -->
+	<select id="viewDao" resultType="com.springlec.base.model.BDto">
+		SELECT * FROM pet_board WHERE seqno = #{seqno}
+	</select>
+	
+	<!-- update -->
+	<update id="modifyDao" >
+		UPDATE pet_board SET title = #{title}, content= #{content}, writer = #{writer} where seqno = #{seqno};
+	</update>
+	
+	<!-- delete -->
+	<delete id="deleteDao"> 
+		DELETE FROM pet_board WHERE seqno=#{seqno} 
+	</delete>
+	
+	<!-- search-->
+	<select id="searchDao" resultType="com.springlec.base.model.BDto">
+		SELECT * FROM pet_board WHERE ${keyword} like #{content}
+	</select>
+
+</mapper>

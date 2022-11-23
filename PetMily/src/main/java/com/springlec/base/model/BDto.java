@@ -4,63 +4,70 @@ import java.sql.Timestamp;
 
 public class BDto {
 
-	int seqno;
-	String title;
-	String content;
-	String writer;
-	Timestamp initdate;
+//	int seqno;
+//	String title;
+//	String content;
+//	String writer;
+//	Timestamp initdate;
+//	
+	int pid;
+	String ptitle;
+	String pcontent;
+	Timestamp pinitdate;
+	String user_uid;
 	
 	public BDto() {
 	}
 
-	public BDto(int seqno, String title, String content, String writer, Timestamp initdate) {
+	public BDto(int pid, String ptitle, String pcontent, Timestamp pinitdate, String user_uid) {
 		super();
-		this.seqno = seqno;
-		this.title = title;
-		this.content = content;
-		this.writer = writer;
-		this.initdate = initdate;
+		this.pid = pid;
+		this.ptitle = ptitle;
+		this.pcontent = pcontent;
+		this.pinitdate = pinitdate;
+		this.user_uid = user_uid;
 	}
 
-	public int getSeqno() {
-		return seqno;
+	public int getPid() {
+		return pid;
 	}
 
-	public void setSeqno(int seqno) {
-		this.seqno = seqno;
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getPtitle() {
+		return ptitle;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setPtitle(String ptitle) {
+		this.ptitle = ptitle;
 	}
 
-	public String getContent() {
-		return content;
+	public String getPcontent() {
+		return pcontent;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setPcontent(String pcontent) {
+		this.pcontent = pcontent;
 	}
 
-	public String getWriter() {
-		return writer;
+	public Timestamp getPinitdate() {
+		return pinitdate;
 	}
 
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setPinitdate(Timestamp pinitdate) {
+		this.pinitdate = pinitdate;
 	}
 
-	public Timestamp getInitdate() {
-		return initdate;
+	public String getUser_uid() {
+		return user_uid;
 	}
 
-	public void setInitdate(Timestamp initdate) {
-		this.initdate = initdate;
+	public void setUser_uid(String user_uid) {
+		this.user_uid = user_uid;
 	}
+
 	
 	
 	

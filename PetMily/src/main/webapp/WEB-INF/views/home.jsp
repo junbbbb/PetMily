@@ -57,7 +57,7 @@
 <!-- header[S] -->
 <nav class="navbar navbar-expand-lg shadow-sm">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="home.do"><img
+		<a class="navbar-brand" href="home"><img
 			src="/images/logo.png" width="45" height="40"
 			style="margin-right: 1rem;"> PETMILY</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -232,19 +232,19 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="col">  
     	<img src="images/bichon.png" class="rounded-circle" alt="Cinque Terre" width="180" height="180"> 
-  		<h4 class="text-secondary" style="padding-top: 20px"><a href="delete?seqno=${content_view.seqno}">비숑</a></h4>
+  		<h4 class="text-secondary" style="padding-top: 20px"><a href="petspec/detail?psbreeds=포메라니안">포메라니안</a></h4>
 	</div>
     <div class="col">
 	    <img src="images/shihtzu.png" class="rounded-circle" alt="Cinque Terre" width="180" height="180"> 
-  		<h4 class="text-secondary" style="padding-top: 20px"><a href="delete?seqno=${content_view.seqno}">시츄</a></h4>
+  		<h4 class="text-secondary" style="padding-top: 20px"><a href="petspec/detail?psbreeds=바셋하운드">바셋하운드</a></h4>
     </div>
     <div class="col">
 	    <img src="images/siberianhusky.png" class="rounded-circle" alt="Cinque Terre" width="180" height="180"> 
-  		<h4 class="text-secondary" style="padding-top: 20px"><a href="delete?seqno=${content_view.seqno}">시베리안 허스키</a></h4>
+  		<h4 class="text-secondary" style="padding-top: 20px"><a href="petspec/detail?psbreeds=그레이하운드">그레이하운드</a></h4>
     </div>
     <div class="col">
     	<img src="images/goldenretriever.png" class="rounded-circle" alt="Cinque Terre" width="180" height="180"> 
-  		<h4 class="text-secondary" style="padding-top: 20px"><a href="delete?seqno=${content_view.seqno}">골든 리트리버</a></h4>
+  		<h4 class="text-secondary" style="padding-top: 20px"><a href="petspec/detail?psbreeds=리트리버">리트리버</a></h4>
     </div>
   </div>
 </div>
